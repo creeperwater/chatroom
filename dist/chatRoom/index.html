@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天室</title>
+    <link rel="icon" href="favicon.png">
+    <base target="_blank">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="bar">
+            <img src="img/chat.png" style="background-color: rgba(0, 0, 0, 0.3)">
+            <img src="img/note.png">
+            <img src="img/issue.png">            
+        </div>
+        <div class="user" onclick="login_show()">
+            <img src="img/defalt.jpg" id="userHead">
+            <p id="username">登录</p>
+            <img src="img/lv0.svg" id="userLevel">
+            <div id="userset" style="display: none;">
+                <p onclick="window.open('userSystemURL?set')">管理账户</p>
+                <p onclick="window.open('test')">测试版</p>
+                <p>公告</p>
+                <p>Issue</p>
+                <p>登录</p>
+                <p onclick="AV.User.logOut();location.reload()">登出</p>
+            </div>
+        </div>
+    </div>
+    <main><div class="content"></div></main>
+    <div class="send">
+        <textarea oninput="text_input()" id="sendtext" maxlength="300"></textarea>
+        <div class="tool">
+            <div onclick="text_send()" id="sendgo"></div>   
+            <div id="sendremain"></div>        
+        </div>
+    </div>
+    <div class="login" style="display: none;">
+        <p>登录</p>
+        <input type="text" placeholder="用户名" id="loginname">
+        <input type="password" placeholder="密码" id="loginpassword">
+        <div onclick="login_go()" >登录</div>
+        <a href="userSystemURL">注册</a>
+    </div>
+    <div class="loading">
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+        <div class="loader"><div class="dot"></div></div>
+    </div>
+</body>
+<script src="relyURL/marked.js"></script>
+<script src="relyURL/jquery.js"></script>
+<script src="relyURL/leancloud.js"></script>
+<script src="script.js"></script>
+</html>

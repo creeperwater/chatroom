@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>注册</title>
+  <link rel="stylesheet" href="relyURL/init.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="note">加载中</div>
+  <div class="container">
+    <img src="home.svg" id="home" onclick="winHome()">
+    <section id="face">
+      <h1>账户管理</h1>
+      <div class="button" onclick="winSignup()">注册账户</div>
+      <div class="button" onclick="goControl()">管理账户</div>
+    </section>
+    <section id="signup">
+      <h1>注册</h1>
+      <div class="row"><h2>用户名</h2><input type="text" placeholder="1-10位" id="signup-username"></div>
+      <div class="row"><h2>邮箱</h2><input type="email" placeholder="QQ/163邮箱" id="signup-email"></div>
+      <div class="row"><h2>密码</h2><input type="password" placeholder="5-20位" id="signup-password"></div>
+      <div class="row"><h2>确认密码</h2><input type="password" placeholder="再次输入密码" id="signup-password2"></div>
+      <div class="button" onclick="goSignup()">注册</div>
+    </section>
+    <section id="checkMail">
+      <p>
+        我向您发送了一封邮件，请点击邮件上的链接以激活账户。<br>
+        我需要通过此方法确保您没有拿假的邮箱糊弄我。
+      </p>
+    </section>
+    <section id="login">
+      <h1>登录</h1>
+      <div class="row"><h2>用户名</h2><input type="text" placeholder="1-10位" id="login-username"></div>
+      <a>忘记用户名？使用邮箱登录</a>
+      <div class="row"><h2>密码</h2><input type="password" placeholder="5-20位" id="login-password"></div>
+      <a onclick="winReset()">忘记密码？重置密码</a>
+      <div class="button" onclick="goLogin()">登录</div>
+    </section>
+    <section id="reset">
+      <p>
+        我向您发送了一封邮件，请点击邮件上的链接以重置密码。<br>
+        请在通过链接打开的页面提交新密码，否则密码将不变。
+      </p>
+    </section>
+  </div>
+</body>
+<script src="relyURL/jquery.js"></script>
+<script src="script.js"></script>
+</html>

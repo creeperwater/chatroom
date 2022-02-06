@@ -1,0 +1,241 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar{
+  display:none;
+}
+html{
+  height: 100%;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+  height: 100%;
+}
+.banner{
+  flex: none;
+  background-color: #1661ab;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+  .banner .bar{
+    display: flex;
+    height: 100%;
+    width: 140px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+    .bar img{
+      height: 100%;
+      cursor: pointer;
+    }
+.banner>div{
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+#username{
+  margin-left: 5px;
+  color: #fff;
+  font-size: 20px;
+}
+.user{
+  position: relative;
+  user-select: none;
+}
+  #userHead{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+  }
+  #userLevel{
+    height: 35px;
+  }
+.send {
+  flex: none;
+  margin: 5px;
+  display: flex;
+  align-items:flex-end
+}
+  #sendtext{
+    flex: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #1661ab;
+    outline: none;
+    resize: none;
+    line-height: 23px;
+    font-size: 18px;
+    padding: 5px;
+    max-height: 200px;
+    word-break: break-all;
+  }
+  .tool{
+    flex: none;
+    width: 65px;
+    position: relative;
+    height: 47px;
+  }
+    #sendgo{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 35px;
+      width: 60px;
+      background-color: #1661ab;
+      color: #fff;
+      line-height: 35px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+    #sendremain{
+      position: absolute;
+      color: #555;
+      font-size: 15px;
+      bottom: 34px;
+      left: 21px;
+    }
+#userset{
+  position: absolute;
+  top: 34px;
+  right: 0;
+  display: flex;
+  width: 86px;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid #1661ab;
+  text-align: center;
+}
+#userset p{
+  font-size: 18px;
+  line-height: 30px;
+  transition-duration: 0.3s;
+}
+#userset p:hover{
+  background-color: #ccc;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.login{
+  position: absolute;
+  top: calc(50% - 170px);
+  left: calc(50% - 130px);
+  width: 260px;
+  height: 320px;
+  background-color: #fff;
+  border: 5px solid #1661ab;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+  .login p{
+    color: #1661ab;
+    font-size: 30px;
+  }
+  .login input{
+    height: 30px;
+    width: 200px;
+    border: 2px solid #1661ab;
+    outline: none;
+    resize: none;
+    line-height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .login div{
+    height: 35px;
+    width: 60px;
+    background-color: #1661ab;
+    color: #fff;
+    line-height: 35px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+main{
+  flex: auto;
+  padding: 5px;
+  overflow-y: scroll;
+}
+.content{
+  display: flex;
+  flex-direction: column-reverse;
+}
+  .info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+    .info img,.info p{
+      margin: 0 2px;
+      white-space: nowrap;
+    }
+    .info img:nth-child(1){
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    }
+    .info p:nth-child(2){
+      font-size: 18px;
+    }
+    .info img:nth-child(3){
+      height: 28px;
+    }
+    .info p:nth-child(4){
+      font-size: 10px;
+      background-color: rgba(0, 0, 0, .2);
+      padding: 0 2px;
+      border-radius: 3px;
+    }
+    .info p:nth-child(5){
+      font-size: 10px;
+    }
+  .message{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    border-left: #1661ab 4px solid;
+    padding-left: 5px;
+    word-break: break-all;
+    max-height: 150px;
+    overflow-y: scroll;
+  }
+    .message h1{
+      font-size: 35px;
+      font-weight: 600;
+    }
+    .message h2{
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .message h3{
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .message h4,.message h5,.message h6{
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .message a{
+      color: #1661ab;
+      text-decoration: none;
+    }
+    .message img{
+      max-height: 100px;
+    }
